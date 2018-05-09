@@ -26,7 +26,7 @@ fun! s:ToggleMouse()
         let &number = s:old_number
         let &relativenumber = s:old_relativenumber
         if g:indentLine_loaded
-            IndentLineEnable
+            IndentLinesEnable
         endif
         echo "Mouse is for Vim (" . &mouse . ")"
     else
@@ -37,7 +37,7 @@ fun! s:ToggleMouse()
         set nonumber
         set norelativenumber
         if g:indentLine_loaded
-            IndentLineDisable
+            IndentLinesDisable
         endif
         echo "Mouse is for terminal"
     endif
