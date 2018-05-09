@@ -14,17 +14,28 @@ fun! s:ToggleMouse()
     if !exists("s:old_mouse")
         let s:old_mouse = "a"
     endif
+    if !exists("s:old_number")
+        let s:old_number = 1
+    endif
+    if !exists("s:old_relativenumber")
+        let s:old_relativenumber = 1
+    endif
+    if !exists("s:old_indentline_enabled")
+        let s:old_indentline_enabled = 1
+    endif
 
     if &mouse == ""
         let &mouse = s:old_mouse
         let &number = s:old_number
         let &relativenumber = s:old_relativenumber
+        let &g:intentLine_enabled = s:old_indentline_enabled
         echo "Mouse is for Vim (" . &mouse . ")"
     else
         let s:old_mouse = &mouse
         let &mouse = ""
         let s:old_number = &number
         let s:old_relativenumber = &relativenumber
+        let s:old_indentline_enabled = &g:indentLine_enabled
         set nonumber
         set norelativenumber
         echo "Mouse is for terminal"
