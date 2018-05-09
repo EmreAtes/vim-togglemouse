@@ -21,7 +21,7 @@ fun! s:ToggleMouse()
         let s:old_relativenumber = 1
     endif
     if !exists("s:old_indentline_enabled")
-        let s:old_indentline_enabled = 1
+        let s:old_indentline_enabled = 0
     endif
 
     if &mouse == ""
