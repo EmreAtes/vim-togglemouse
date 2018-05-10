@@ -20,6 +20,9 @@ fun! s:ToggleMouse()
     if !exists("s:old_relativenumber")
         let s:old_relativenumber = 1
     endif
+    if exists("g:ale_enabled")
+        ALEToggle
+    endif
 
     if &mouse == ""
         let &mouse = s:old_mouse
