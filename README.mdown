@@ -1,4 +1,4 @@
-vim-togglemouse ![Project status](http://stillmaintained.com/nvie/vim-togglemouse.png)
+vim-togglemouse
 ===============
 
 Installation
@@ -6,6 +6,10 @@ Installation
 1. Copy the file `plugin/toggle_mouse.vim` to your `~/.vim/plugin` directory
 2. There is no step 2.
 
+Differences from the original
+-----------------------------
+This plugin toggles any plugins that I have so that copying text is easier
+e.g., ALE which adds spaces to the left side is disabled for copying.
 
 Usage
 -----
